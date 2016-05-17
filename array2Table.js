@@ -8,7 +8,6 @@ var createHead = function(array) {
 
     if (typeof array[0] == "object") {
         for (var key in array[0]) {
-            //有可能是原型上的属性 而不是本身的属性
             if (array[0].hasOwnProperty(key)) {
                 var td = document.createElement("td");
                 var objProperty = document.createTextNode(key);
@@ -36,12 +35,9 @@ var createBody = function(array) {
         index_td.appendChild(index);
 
         oneRow.appendChild(index_td);
-        //!!!!!!
         if (typeof array[i] == "object") {
             for (var key in array[i]) {
-                //有可能是原型上的属性 而不是本身的属性
                 if (array[i].hasOwnProperty(key)) {
-                    //The current property is not a direct property of p
                     var td = document.createElement("td");
                     var text = document.createTextNode(array[i][key]);
                     oneRow.appendChild(td).appendChild(text);
