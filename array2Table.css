@@ -1,0 +1,23 @@
+td {
+    border-right: dashed 1px;
+    border-left: dashed 1px;
+    width: 200px;
+    text-align: center;
+}
+
+thead tr {
+    background-color: #eee;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(230, 239, 251);
+}
+
+tbody tr td:nth-child(n+2) {
+    color: brown;
+    border-color: black;
+}
